@@ -4,13 +4,17 @@
 }
 
 .header {
-  text-align: center;
-  color: var(--text-color);
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 0;
 }
 
 .header__name {
   color: var(--gold);
+}
+.header__slogan {
+  font-size: 1.25rem;
 }
 
 .alert p {
@@ -47,8 +51,8 @@ h1 {
 h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  color: #004e92;
-  margin-bottom: 2rem;
+  color: white;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -130,4 +134,9 @@ h2 {
   text-align: center;
   font-size: 0.8rem;
   color: var(--text-color);
+}
+.footer__footer{
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 2rem 0;
 }
