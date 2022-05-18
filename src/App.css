@@ -1,17 +1,25 @@
-.body {
-  background: linear-gradient(to right, #004e92, #000428);
-  font-family: sans-serif;
+.main{
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main__logo{
+  width: 50%;
 }
 
 .header {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 0.5rem;
   padding: 2rem 0;
+  grid-area: header;
 }
 
 .header__name {
-  color: var(--gold);
+  color: var(--secondary-highlight-color);
 }
 .header__slogan {
   font-size: 1.25rem;
