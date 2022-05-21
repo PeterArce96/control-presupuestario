@@ -65,8 +65,9 @@ html {
 }
 
 .budget__budget {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(100%, 256px));
+  justify-content: center;
   gap: 2rem;
   background-color: var(--primary-card-color);
   padding: 2rem;
@@ -74,7 +75,9 @@ html {
 }
 
 .budget__title,
-.budget-summary__title {
+.expense-form__title,
+.budget-summary__title,
+.expenses__title {
   color: var(--primary-highlight-color);
   font-weight: 600;
   font-size: 1.5rem;
@@ -82,13 +85,15 @@ html {
   margin: 0;
 }
 
-.budget__form {
+.budget__form,
+.expense-form__form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.budget__form-input {
+.budget__form-input,
+.expense-form__form-input {
   background-color: transparent;
   border: 0.0625rem solid var(--primary-theme-color);
   border-radius: 0.25rem;
@@ -98,23 +103,27 @@ html {
   transition: var(--all-transitions);
 }
 
-.budget__form-input:invalid {
+.budget__form-input:invalid,
+.expense-form__form-input:invalid {
   text-shadow:
     0 0 0.0625rem var(--invalid-color),
     0 0 0.125rem var(--invalid-color);
 }
 
-.budget__form-input:valid {
+.budget__form-input:valid,
+.expense-form__form-input:valid {
   text-shadow:
     0 0 0.125rem var(--primary-highlight-color),
     0 0 0.25rem var(--primary-highlight-color);
 }
 
-.budget__form-input::placeholder {
+.budget__form-input::placeholder,
+.expense-form__form-input::placeholder {
   color: var(--primary-theme-color);
 }
 
-.budget__form-button {
+.budget__form-button,
+.expense-form__form-button {
   background-color: var(--button-color);
   border: none;
   border-radius: var(--border-radius);
@@ -125,11 +134,16 @@ html {
   transition: var(--all-transitions);
 }
 
-.budget__form-button:hover {
+.budget__form-button:hover,
+.expense-form__form-button:hover {
   background-color: var(--button-color-active);
 }
 
-.budget-summary {
+.budget__budget-card,
+.budget-summary,
+.expense-form,
+.budget-summary,
+.expenses {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -159,6 +173,35 @@ html {
   font-weight: 300;
   text-align: center;
   padding: 0.5rem;
+}
+
+.expenses__expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--primary-card-text-color);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expenses__expense-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid var(--primary-theme-color);
+}
+
+.expenses__expense-concept {
+  color: green;
+  font-weight: 800;
+  margin: 0;
+}
+.expenses__expense-concept:first-letter{
+  text-transform: uppercase;
+}
+.expenses__expense-value {
+  font-weight: 600;
+  margin: 0;
 }
 
 .contenido {
